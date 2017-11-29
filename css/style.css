@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?kdqcgi');
+    src:  url('fonts/icomoon.eot?kdqcgi#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?kdqcgi') format('truetype'),
+      url('fonts/icomoon.woff?kdqcgi') format('woff'),
+      url('fonts/icomoon.svg?kdqcgi#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-phone:before {
+    content: "\e942";
+  }
+  .icon-mail2:before {
+    content: "\ea84";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+
+
+/*重置样式*/
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {  
+     margin: 0;
+     padding: 0
+    }
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: '微软雅黑';
+}
+.content{
+    display: flex;
+    align-items: stretch;
+}
+/* 个人信息 */
+.content-introduce{
+    background: url(http://coding.imweb.io/img/project/resume/bg.png) #188eee repeat;
+    flex: 1;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-flow: column nowrap; /* flexbox水平垂直对齐 */
+    justify-content: center;
+    align-items: center;
+}
+.content-introduce .profile-picture{
+    background:#fff;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.4);
+}
+.content-introduce .name{
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-top: 3%;
+}
+.content-introduce .interest{
+    font-size: 1.4rem;
+    margin: 2% 0;
+}
+.content-introduce .info-list{
+    flex:1;
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-align: left;
+    margin: 3% 0;
+    white-space: nowrap;
+}
+.content-introduce .info-list .info-item{
+   margin-bottom: 8%; 
+ }
+ .content-introduce .info-list .info-item a:link,
+ .info-item a:visited{
+    text-decoration: none;
+    color: #fff;
+  }
+.icon-phone,
+.icon-mail2,
+.icon-github{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 4px;
+    margin-right:5px;
+}
+.content-introduce .education{
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.1);
+    font-size: 1.2rem;
+    text-align: left; 
+    list-style-type: none;  
+    padding: 0 5px;
+    position: relative;
+    width: 300px;
+    display: flex;  
+    overflow: hidden;
+}
+.content-introduce .education div{
+    flex: 1;
+}
+.content-introduce .education div li{
+    margin: 12px 0;
+}
+/* 个人经历 */
+.content-experience{
+    flex: 1;
+    /* height: 100vh; */ /*高度自适应*/
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.content-experience .title{
+    white-space: nowrap;
+    text-align: center;
+}
+.content-experience .title-1{
+    margin: 36px 0;
+}
+.content-experience .title-2{
+    margin: 18px 0;
+}
+.content-experience .title .line{
+    display: inline-block;  
+    width: 35%;  
+    border-top: 1px solid #ccc ;
+    /* 适应retina显示屏1px线 */
+    /* transform: scaleY(.5);
+    transform-origin: 0 0;   */
+}
+.content-experience .title .text{
+    margin: 0 10px;
+    font-size: 1.8rem;
+    color: #188eee;
+    vertical-align: middle;
+}
+.experience,
+.skill{
+    position: relative;
+    width:80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 工作经历 */
+.content-work{
+    flex:1;
+}
+.content-work .experience{
+    padding-left: 20px;
+    background:linear-gradient(to bottom,#fff,#fff 5%,#ccc 5%,#ccc 75%,#fff) no-repeat left top/1.4px 100%;
+}
+
+.content-work .experience .icon-time{
+    position: absolute;
+    left: 0;
+    transform: translate(-42%,45%);
+    border-radius: 50%;
+    background: #188eee;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 3px rgba(24,142,238,.2);
+}
+.content-work .experience .exp{
+    font-size: 1.4rem;
+    margin: 4px 0;
+}
+.content-work .experience .exp-achievement{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #999;
+    margin: 15px 0;
+}
+/* 技能特长 */
+.content-skill{
+    flex: 1;
+}
+.content-skill .skill span:nth-child(1){
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 12px 0 8px;
+}
+.content-skill .skill span:nth-child(2){
+    position: absolute;
+    right: 0;
+    transform: translateY(65%);
+    color: #999;
+    border: .5px solid #ccc;
+    border-radius: 12px;
+    padding: 1px 6px;
+}
+.content-skill .skill>p{
+    font-size: 1.1rem;
+    color: #999;
+}
+/* 进度条 */
+.content-skill .skill .progress-bar{   /*进度条容器*/
+    background: #999;
+    height: 4px;
+    width: 100%;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+.progress-bar .progress{                /*进度条*/
+    height: 4px;
+    background: linear-gradient(to right,#117ad4,#11aded) no-repeat left top/100% 4px;
+    border-radius: 4px;
+}
+.skill:nth-child(2) .progress{          /*PS的进度条*/
+    width: 90%;
+}
+.skill:nth-child(3) .progress{          /*CSS的进度条*/
+    width: 70%;
+}
+.skill:nth-child(4) .progress{          /*JS 的进度条*/
+    width: 40%;
+}
+@keyframes progressRun{
+    from{
+        width:0%;
+    }
+}
+.skill:hover .progress{
+    animation:progressRun 2s 1;
+}
+/* 头像闪烁动画 */
+@keyframes profilePictureRun{
+    from{
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.4);
+    }
+    to{
+        box-shadow: 0 0 30px 20px rgba(255,255,255,0.4);
+    }
+}
+.profile-picture:hover{
+    animation: profilePictureRun .5s alternate infinite;
+}
+/* 工作经历点闪烁 */
+@keyframes iconTimeRun{
+    from{
+        box-shadow: 0 0 0 3px rgba(24,142,238,.2);
+    }
+    to{
+        box-shadow: 0 0 0 6px rgba(24,142,238,.2);
+    }
+}
+.exps:hover .icon-time{
+    animation: iconTimeRun .5s alternate infinite;
+}
+/* 响应式显示 */
+@media (max-width:767px){
+    .content{
+        flex-direction:column;
+    }
+    .skill:nth-child(4) .progress{ /*为了让单栏显示看起来较为正常，增加页面最后JS进度条的下边距*/
+        margin-bottom:60px; 
+    }
+    .profile-picture{       /*为了让横屏时显示看起来较为正常，增加.content-introduce的上下内边距*/
+        margin-top: 30px;
+    }
+    .education{
+        margin-bottom: 30px;
+    }
+}
